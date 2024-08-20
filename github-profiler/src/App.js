@@ -6,7 +6,10 @@ import Card from './Card';
 function App() {
 
   const override = {
-    // margin: "20%"
+    position: "fixed",
+    top: "50%",
+    right: "50%",
+    margin: "auto"
   }
 
   const [ userName, setUserName ] = useState("king525dev");
@@ -27,10 +30,10 @@ function App() {
       setUserData(data);
       setLoading(false);
     }
-
-    console.log(userData);
   }
   
+  console.log(userData);
+
 
   useEffect(() => {
     fetchData();
@@ -45,7 +48,7 @@ function App() {
   }
 
   return (
-    <div className="container p-4">
+    <div className="container">
       <div className="input-wrapper">
         <input 
           name="search-by-username"
@@ -53,12 +56,11 @@ function App() {
           placeholder="Search Github Username..."
           value={userName}
           onChange={(event) => setUserName(event.target.value)}
+          onSubmit={handleSubmit}
         />
         <button onClick={handleSubmit}>Search</button>
-
-        <Card user={userData}/>
       </div>
-      
+      <Card user={userData}/>
     </div>
   );
 }
