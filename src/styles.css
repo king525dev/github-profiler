@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Moderustic", sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-color: #0d1017;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0d1017;
+  color: #eee;
+  overflow: hidden;
+  width: 100%;
+}
+
+.input-wrapper {
+  margin: 0 0 5rem 0;
+  display: flex;
+  gap: 0.1rem;
+  justify-content: center;
+}
+
+.input-wrapper input {
+  outline: none;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  border-radius: 2px 0 0 2px;
+  border: none;
+}
+
+.input-wrapper button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  background-color: #527bab;
+  color: #eee;
+  cursor: pointer;
+}
+
+.user {
+  background-color: #eee;
+  color: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar{
+  height: 15rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.name-container{
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.name-container a{
+  font-size: 1.4rem;
+  color: #527bab;
+}
+
+.name-container p{
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.profile-info div{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  font-size: 2.5rem;
+}
+
+.profile-info div p:nth-of-type(1){
+  font-weight: bold;
+}
